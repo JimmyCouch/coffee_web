@@ -1,0 +1,191 @@
+// Place all the styles related to the landing_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.main-container {
+  padding-top: 200px;
+}
+
+#water {
+  background: image-url('waves_light_brown.png')
+}
+
+
+.coffee-cup {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  top: 250px;
+  right: 0;
+  bottom: 0;
+  // overflow: hidden;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-style: solid;
+  border-color: white;
+  background-color: #fefefe;
+  border-width: 0.8rem;
+  margin: auto;
+
+  border-bottom-left-radius: 85px;
+  border-bottom-right-radius: 85px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  box-shadow: inset 1px 1px 25px 5px #D2C1A3;
+  background-color: rgb(255, 237, 223);
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 75px;
+    border-width: 0.8rem;
+    border-color: white;
+    border-style: solid;
+    left: 100%;
+    border-radius: 0 50% 50% 0;
+    top: 60px;
+    transform: skewY(-15deg);
+    border-left-width: 0;
+  }
+
+  &:before {
+    // content: "";
+    // position: absolute;
+    // top: 50%;
+    // width: 90px;
+    // height: 15px;
+    // background-color: #fff;
+    // right: 100%;
+  }
+}
+
+.coffee-cup-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 75%;
+  background-color: #3B3B3B;
+  z-index: 2;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: -50%;
+
+
+    background-image:    -moz-linear-gradient(-25deg, rgba(0, 0, 0, 0) 50%, #3B3B3B 50%);
+    background-image:     -ms-linear-gradient(-25deg, rgba(0, 0, 0, 0) 50%, #3B3B3B 50%);
+    background-image:      -o-linear-gradient(-25deg, rgba(0, 0, 0, 0) 50%, #3B3B3B 50%);
+    background-image:         linear-gradient(-25deg, rgba(0, 0, 0, 0) 50%, #3B3B3B 50%);
+    background-image: -webkit-linear-gradient(-25deg, rgba(0, 0, 0, 0) 50%, #3B3B3B 50%);
+  }
+}
+
+.coffee-steam {
+  position: absolute;
+  height: 10rem;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+}
+
+.steam {
+  width: 1rem;
+  height: 1rem;
+  color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: 0;
+  -webkit-animation: steam-active 3s ease-out infinite;
+  animation: steam-active 3s ease-out infinite;
+  -webkit-filter: blur(0.5rem);
+  filter: blur(0.5rem);
+
+  &:before {
+    content: "~";
+    -webkit-transform: rotate(90deg) scaleX(15) scaleY(10);
+    transform: rotate(90deg) scaleX(15) scaleY(10);
+    display: block;
+  }
+}
+
+.steam.large {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  &:before {
+    -webkit-transform: rotate(90deg) scaleX(20) scaleY(15);
+    transform: rotate(90deg) scaleX(20) scaleY(15);
+  }
+}
+
+.steam:nth-child(1n) {
+  left: calc(50% - -1.5rem);
+}
+
+.steam:nth-child(2n) {
+  left: calc(50% - 0rem);
+}
+
+.steam:nth-child(3n) {
+  left: calc(50% - 1.5rem);
+}
+
+
+
+@keyframes steam-active {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  16% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+}
+
+#water {
+  background-position: top right;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 100px;
+
+  border-bottom-left-radius: 78px;
+  border-bottom-right-radius: 78px;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.workflow {
+  height: 100vh
+}
+
+.workflow {
+  background-color: lightblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: white;
+  position: relative;
+  overflow: hidden
+}
+
+
+.welcome-sign {
+  position: absolute;
+  top: 25%;
+  left: 12%;
+  h1 {
+    font-size: 100px;
+    color: #3B3B3B;
+  }
+}
